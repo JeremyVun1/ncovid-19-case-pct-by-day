@@ -7,7 +7,7 @@ Modify data/watchlist.json to change the countries that get plotted. Add additio
 
 This script pulls the latest ECDC ncovid-19 data to plot a country's reported ncovid-19 cases as a percentage of the country's population and graphs the reported velocity at which the virus is spreading through said country's population. Plots are normalised to start at the date of a country's first reported case.
 
-![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/img/plot.png)
+![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/img/screen.png)
 https://opendata.ecdc.europa.eu/covid19/casedistribution/json/
 
 Virtually all countries seem to experience the same exponential curve behaviour. For some countries, this curve is delayed which may just indicate a lag in test kit availability.
