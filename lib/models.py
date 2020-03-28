@@ -36,5 +36,6 @@ class Country:
             self.pct.append(pct_total)
 
     def add_cases(self, new_cases):
-        self.cases.append(enforce_int(new_cases))
+        new_cases = enforce_int(new_cases)
+        self.cases.append(new_cases)
         self.case_total = self.case_total + new_cases
