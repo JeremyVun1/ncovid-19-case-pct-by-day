@@ -26,6 +26,8 @@ def read_json_api(url):
 # parse our data into domain models
 def load_data(url):
     data = read_json_api(url)["records"]
+    if len(data):
+        date = data[0]["dateRep"]
 
     result = {}
     for item in data:
@@ -41,7 +43,7 @@ def load_data(url):
     for k, v in result.items():
         result[k] = v.finalise()
     
-    return result
+    return result, date
 
 def load_watchlist(file_name):
     result = {}

@@ -9,7 +9,7 @@ def create_subplot(plot_num, region):
     result.set_ylabel("%")
     return result
 
-def plot_case_pct(data, regions, cmp_countries):
+def plot_case_pct(data, regions, cmp_countries, date):
     plot_num = 221
 
     for region in regions:
@@ -26,5 +26,5 @@ def plot_case_pct(data, regions, cmp_countries):
         subplot.legend()
         plot_num = plot_num + 1
 
-    plt.suptitle("confirmed cases as % of population since each countries first reported casepip")
+    plt.suptitle(f"{date} - Confirmed cases as % of population since each countries first reported case")
     plt.show()
