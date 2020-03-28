@@ -1,0 +1,52 @@
+[
+    {
+        "region": "europe",
+        "countries": [
+            "United_Kingdom",
+            "Italy",
+            "Germany",
+            "Spain",
+            "France",
+            "Switzerland",
+            "Netherlands",
+            "Greece",
+            "Poland",
+            "Diamond Princess",
+            "Sweden"
+        ]
+    },
+    {
+        "region": "americas",
+        "countries": [
+            "United_States_of_America",
+            "Canada",
+            "Brazil",
+            "Chile",
+            "Argentina",
+            "Mexico",
+            "Peru"
+        ]
+    },
+    {
+        "region": "east_asia",
+        "countries": [
+            "China",
+            "Singapore",
+            "South_Korea",
+            "Japan",
+            "Taiwan",
+            "Australia",
+            "New Zealand"
+        ]
+    },
+    {
+        "region": "central_asia",
+        "countries": [
+            "Iran",
+            "Saudi Arabia",
+            "Turkey",
+            "Israel",
+            "India"
+        ]
+    }
+]
