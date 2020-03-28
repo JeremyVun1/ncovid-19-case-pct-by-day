@@ -21,10 +21,10 @@ class Country:
         self.case_total = 0
         self.pct = []
 
-        self.add_cases(enforce_int(cases))
+        self.add_cases(cases)
 
     def finalise(self):
-        self.cases.reverse()
+        self.cases.reverse() # order daily case numbers chronologically from beginning -> end
         self.cases = np.trim_zeros(self.cases, 'f')
         self.build_case_pct_by_day()
         return self
@@ -36,6 +36,5 @@ class Country:
             self.pct.append(pct_total)
 
     def add_cases(self, new_cases):
-        new_cases = enforce_int(new_cases)
-        self.cases.append(new_cases)
+        self.cases.append(enforce_int(new_cases))
         self.case_total = self.case_total + new_cases
