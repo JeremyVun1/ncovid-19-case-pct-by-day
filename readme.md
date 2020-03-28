@@ -5,7 +5,7 @@
 
 Modify data/watchlist.json to change the countries that get plotted.
 
-This script uses ECDC ncovid-19 data (March 28, 2020) to plot a country's reported ncovid-19 cases as a percentage of the country's population to graph the reported velocity at which the virus spreads through a country's population. Each country's plot is normalised to start at the date of a their first reported case.
+This script pulls the latest ECDC ncovid-19 data to plot a country's reported ncovid-19 cases as a percentage of the country's population to graph the reported velocity at which the virus spreads through a country's population. Each country's plot is normalised to start at the date of a their first reported case.
 
 ![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/img/plot.png)
 https://opendata.ecdc.europa.eu/covid19/casedistribution/json/
