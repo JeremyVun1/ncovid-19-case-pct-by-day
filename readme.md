@@ -1,5 +1,6 @@
 **Usage**
 > pipenv install
+
 > python main.py
 
 Modify data/watchlist.json to change the countries that get plotted.
