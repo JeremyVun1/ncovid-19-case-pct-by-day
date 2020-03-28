@@ -3,7 +3,7 @@
 
 > python main.py
 
-Modify data/watchlist.json to change the countries that get plotted.
+Modify data/watchlist.json to change the countries that get plotted. Add additional regions and countries if you want.
 
 This script pulls the latest ECDC ncovid-19 data to plot a country's reported ncovid-19 cases as a percentage of the country's population and graphs the reported velocity at which the virus is spreading through said country's population. Plots are normalised to start at the date of a country's first reported case.
 
