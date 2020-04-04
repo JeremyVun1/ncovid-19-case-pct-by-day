@@ -6,12 +6,9 @@
             "Italy",
             "Germany",
             "Spain",
-            "France",
             "Switzerland",
             "Netherlands",
-            "Greece",
-            "Poland",
-            "Diamond Princess",
+            "Diamond_Princess",
             "Sweden"
         ]
     },
@@ -20,11 +17,7 @@
         "countries": [
             "United_States_of_America",
             "Canada",
-            "Brazil",
-            "Chile",
-            "Argentina",
-            "Mexico",
-            "Peru"
+            "Chile"
         ]
     },
     {
@@ -45,8 +38,7 @@
             "Iran",
             "Saudi Arabia",
             "Turkey",
-            "Israel",
-            "India"
+            "Israel"
         ]
     }
 ]
