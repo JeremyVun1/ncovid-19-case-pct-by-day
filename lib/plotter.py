@@ -18,7 +18,7 @@ def create_subplot(plot_num, region):
     return result
 
 
-def plot_case_pct(data, regions, cmp_countries, date):
+def plot_case_pct(data, regions, cmp_countries, date, metric):
     plot_num = 221
 
     for region in regions:
@@ -35,7 +35,7 @@ def plot_case_pct(data, regions, cmp_countries, date):
         subplot.legend()
         plot_num = plot_num + 1
 
-    plt.suptitle(f"{date} - Confirmed cases as % of population since each countries first reported case")
+    plt.suptitle(f"{date} \n {metric} as % of population since each countries first reported case")
     plt.show()
 
 
@@ -78,7 +78,7 @@ def clear_texts(texts):
         text.set_text("")
 
 
-def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps):
+def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric):
     fps = enforce_int(fps)
     countries = get_all_countries(regions, cmp_countries, data)
     max_n = get_max_n(data)
@@ -101,8 +101,6 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps):
                 line.set_xdata(x_data)
                 line.set_ydata(y_data)
                 texts.append(plt.text(i, countries[c].pct[i], c))
-                # line.set_xdata(line.get_xdata().append(i))
-                # line.set_ydata(line.get_ydata().append(i))
 
                 # update the axis ranges
                 x_range.set_max(i)
@@ -110,7 +108,7 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps):
         
         plt.xlim(x_range.get_min(), x_range.get_max())
         plt.ylim(y_range.get_min(), y_range.get_max())
-        plt.suptitle(f"{start_date.strftime('%d-%m-%Y')} \n Confirmed cases as % of population since each countries first reported case")
+        plt.suptitle(f"{start_date.strftime('%d-%m-%Y')} \n {metric} as % of population since each countries first reported case")
         plt.pause(1/fps)
         start_date = start_date + timedelta(days=1)
         

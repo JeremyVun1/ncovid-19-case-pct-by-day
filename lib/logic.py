@@ -31,7 +31,7 @@ def write_data(data, filename="data/data.json"):
 
 
 # parse our data into domain models
-def load_data(url, cached_date, trim_start=True):
+def load_data(url, cached_date, trim_start=True, metric="cases"):
     cached_date = datetime.strptime(cached_date, "%d/%m/%Y").date()
     curr_date = (datetime.now() - timedelta(hours=10)).date()
 
@@ -51,7 +51,7 @@ def load_data(url, cached_date, trim_start=True):
 
     result = {}
     for item in data:
-        cases = item["cases"]
+        cases = item[metric]
         country_name = item["countriesAndTerritories"]
         pop = item["popData2018"]
         item_date = datetime.strptime(item["dateRep"], "%d/%m/%Y").date()

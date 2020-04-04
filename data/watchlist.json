@@ -4,12 +4,10 @@
         "countries": [
             "United_Kingdom",
             "Italy",
-            "Germany",
+            "France",
             "Spain",
             "Switzerland",
-            "Netherlands",
-            "Diamond_Princess",
-            "Sweden"
+            "Belgium"
         ]
     },
     {
@@ -24,20 +22,18 @@
         "region": "east_asia",
         "countries": [
             "China",
-            "Singapore",
             "South_Korea",
+            "Singapore",
             "Japan",
             "Taiwan",
             "Australia",
-            "New Zealand"
+            "New_Zealand"
         ]
     },
     {
         "region": "central_asia",
         "countries": [
             "Iran",
-            "Saudi Arabia",
-            "Turkey",
             "Israel"
         ]
     }
