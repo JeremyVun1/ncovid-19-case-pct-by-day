@@ -79,13 +79,13 @@ def load_watchlist(file_name):
     return result
 
 
-def load_config(filename):
+def load_config(filename, scope="config"):
     config = configparser.ConfigParser()
     config.read(filename)
-    if "metadata" in config:
-        return config['metadata']
+    if scope in config:
+        return config[scope]
     else:
-        config["metadata"] = {
+        config[scope] = {
             "cached_date": "01/01/1901"
         }
         with open(filename, 'w') as configfile:
