@@ -6,6 +6,7 @@ import numpy as np
 
 from lib.models import Axis_range
 from lib.utility import enforce_int
+from lib.renderer import render_graph_anim
 
 fig = plt.figure(figsize=(20,10))
 
@@ -78,7 +79,7 @@ def clear_texts(texts):
         text.set_text("")
 
 
-def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric):
+def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric, render=False):
     fps = enforce_int(fps)
     countries = get_all_countries(regions, cmp_countries, data)
     max_n = get_max_n(data)
@@ -110,9 +111,14 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric):
         plt.ylim(y_range.get_min(), y_range.get_max())
         plt.suptitle(f"{start_date.strftime('%d-%m-%Y')} \n {metric} as % of population since each countries first reported case")
 
-        plt.savefig(f"img/anim/{start_date}")
-        plt.pause(1/fps)
+        if render:
+            plt.savefig(f"img/anim/{start_date}")
+        else:
+            plt.pause(1/fps)
 
         start_date = start_date + timedelta(days=1)
-        
-    plt.show()
+
+    if render:
+        render_graph_anim(fps)
+    else:
+        plt.show()

@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 matplotlib = "*"
 numpy = "*"
+opencv-python = "*"
 
 [requires]
 python_version = "3.7"

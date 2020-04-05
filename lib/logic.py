@@ -87,7 +87,7 @@ def load_config(filename, scope="config"):
     else:
         config[scope] = {
             "cached_date": "01/01/1901",
-            "fps": 23,
+            "fps": 16,
             "metric": "cases"
         }
         with open(filename, 'w') as configfile:
