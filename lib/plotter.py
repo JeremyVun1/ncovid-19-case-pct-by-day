@@ -80,6 +80,7 @@ def clear_texts(texts):
 
 
 def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric, render=False):
+    print("...plotting frames")
     fps = enforce_int(fps)
     countries = get_all_countries(regions, cmp_countries, data)
     max_n = get_max_n(data)
@@ -107,14 +108,14 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric, re
                 x_range.set_max(i)
                 y_range.set_max(countries[c].pct[i])
         
-        plt.xlim(x_range.get_min(), x_range.get_max())
+        plt.xlim(x_range.get_min(), 1 if x_range.get_max() == 0 else x_range.get_max())
         plt.ylim(y_range.get_min(), y_range.get_max())
         plt.suptitle(f"{start_date.strftime('%d-%m-%Y')} \n {metric} as % of population since each countries first reported case")
 
         if render:
             plt.savefig(f"img/anim/{start_date}")
         else:
-            plt.pause(1/fps)
+            plt.pause(1/(fps*2))
 
         start_date = start_date + timedelta(days=1)
 

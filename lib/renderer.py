@@ -17,14 +17,12 @@ def get_filepath(src, filename):
     return f"{src}{filename}"
 
 
-def render_graph_anim(fps):
-    src = "img/anim/"
-    target = "out.avi"
-
+def render_graph_anim(fps, src="img/anim/", target="out.avi"):
     images = [f for f in os.listdir(src) if os.path.isfile(os.path.join(src, f))]
     if not len(images):
         return
 
+    print(f"...rendering {target}")
     w, h = get_frame_dimensions(get_filepath(src, images[0]))
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     video = cv2.VideoWriter(target, fourcc, enforce_int(fps), (w, h))
