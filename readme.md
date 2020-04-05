@@ -1,11 +1,14 @@
 **Usage**
-> pipenv install
+> pip install
 
 **Static chart**
 > python main.py
 
-**Animated chart**
+**Show Animated chart**
 > python main.py -a
+
+**Render video out.avi**
+> python main.py -o
 
 Modify data/watchlist.json to change the countries that get plotted. Add additional regions and countries if you want.
 
