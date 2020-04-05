@@ -120,6 +120,6 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric, re
         start_date = start_date + timedelta(days=1)
 
     if render:
-        render_graph_anim(fps)
+        render_graph_anim(fps, target=f'{start_date}.avi')
     else:
         plt.show()
