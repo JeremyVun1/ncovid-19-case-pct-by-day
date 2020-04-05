@@ -21,3 +21,5 @@ https://opendata.ecdc.europa.eu/covid19/casedistribution/json/
 ![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/img/screen.png)
 
 ![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/img/deaths.png)
+
+![alt text](https://raw.githubusercontent.com/elodea/ncovid-19-case-pct-by-day/master/out/2020-04-05.avi)
