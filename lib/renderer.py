@@ -18,6 +18,7 @@ def get_filepath(src, filename):
 
 
 def render_graph_anim(fps, src="img/anim/", target="out.avi"):
+    target = f"out/{target}"
     images = [f for f in os.listdir(src) if os.path.isfile(os.path.join(src, f))]
     if not len(images):
         return
