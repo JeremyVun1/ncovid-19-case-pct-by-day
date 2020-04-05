@@ -38,7 +38,7 @@ def load_data(url, cached_date, trim_start=True, metric="cases"):
     if cached_date < curr_date:
         data = read_json_api(url)["records"]
         write_data({"records": data})
-        set_config("metadata", "cached_date", data[0]["dateRep"])
+        set_config("config", "cached_date", data[0]["dateRep"])
     else:
         data = read_json_file("data/data.json")
         data = data["records"]
@@ -86,7 +86,9 @@ def load_config(filename, scope="config"):
         return config[scope]
     else:
         config[scope] = {
-            "cached_date": "01/01/1901"
+            "cached_date": "01/01/1901",
+            "fps": 23,
+            "metric": "cases"
         }
         with open(filename, 'w') as configfile:
             config.write(configfile)

@@ -109,7 +109,10 @@ def plot_case_pct_anim(data, regions, cmp_countries, start_date, fps, metric):
         plt.xlim(x_range.get_min(), x_range.get_max())
         plt.ylim(y_range.get_min(), y_range.get_max())
         plt.suptitle(f"{start_date.strftime('%d-%m-%Y')} \n {metric} as % of population since each countries first reported case")
+
+        plt.savefig(f"img/anim/{start_date}")
         plt.pause(1/fps)
+
         start_date = start_date + timedelta(days=1)
         
     plt.show()
