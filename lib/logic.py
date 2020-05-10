@@ -1,5 +1,5 @@
 import json
-import urllib.request
+import requests
 import configparser
 from datetime import datetime, timedelta
 from .models import Country
@@ -16,12 +16,13 @@ def read_json_file(file_name):
 def read_json_api(url):
     try:
         print(f"...requesting data from {url}")
-        with urllib.request.urlopen(url) as request:
-            result = json.loads(request.read().decode())
+        response = requests.get(url)
+        result = response.json()
         
         print("data successfully fetched!")
         return result
-    except:
+    except Exception as e:
+        print(e)
         print("data could not be fetched")
         return read_json_file("data/data.json")
 
