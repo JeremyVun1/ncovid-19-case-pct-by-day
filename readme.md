@@ -1,5 +1,5 @@
 **Usage**
-> pip install
+> pipenv install
 
 **Static chart**
 > python main.py

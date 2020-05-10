@@ -23,7 +23,7 @@ def read_json_api(url):
         return result
     except:
         print("data could not be fetched")
-        return read_json_file("../data/data.json")
+        return read_json_file("data/data.json")
 
 def write_data(data, filename="data/data.json"):
     with open(filename, 'w') as file:
