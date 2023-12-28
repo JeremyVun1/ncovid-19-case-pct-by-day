@@ -54,7 +54,8 @@ def load_data(url, cached_date, trim_start=True, metric="cases"):
     for item in data:
         cases = item[metric]
         country_name = item["countriesAndTerritories"]
-        pop = item["popData2018"]
+        pop = item["popData2019"]
+
         item_date = datetime.strptime(item["dateRep"], "%d/%m/%Y").date()
 
         if country_name in result:
@@ -98,7 +99,7 @@ def load_config(filename, scope="config"):
 def set_config(scope, config_prop, value, filename='config.ini'):
     with open(filename, 'r') as configfile:
         config = configparser.ConfigParser()
-        config.readfp(configfile)
+        config.read_file(configfile)
     
     with open(filename, 'w') as configfile:
         config[scope][config_prop] = value

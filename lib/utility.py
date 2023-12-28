@@ -1,4 +1,7 @@
 def enforce_int(x):
+    if x == None:
+        return 0
+
     if type(x) is str:
         x = x.strip()
         return 0 if len(x) == 0 else int(x)
